@@ -8,8 +8,8 @@ iris = load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 
 # 🚀 Train Regression Model (Predict Sepal Length based on other features)
-X = df.iloc[:, 1:]  # Independent variables (all except "Sepal Length")
-y = df.iloc[:, 0]   # Dependent variable ("Sepal Length")
+X = df
+y = iris.target
 
 # 🚀 Split into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
